@@ -214,6 +214,11 @@ body {
   width: 25%;
 }
 
+.creation__card:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
 .creation__cards-desktop {
   -ms-grid-columns: (minmax(256px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));

@@ -154,6 +154,11 @@ body {
         &:nth-child(4) > span {
             width: 25%;
         }
+
+        &:hover {
+            cursor: pointer;
+            opacity: .5;
+        }
     }
 
     &__cards-desktop {
