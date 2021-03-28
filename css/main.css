@@ -562,7 +562,7 @@ body {
     width: 192px;
   }
   .main {
-    padding: 10rem 16.5rem;
+    padding: 15rem 16.5rem;
     position: relative;
   }
   .main__img {
@@ -581,6 +581,9 @@ body {
   }
   .creation {
     padding: 2.5rem 16.5rem 10rem;
+  }
+  .creation__cards-desktop {
+    padding: 3rem 0 5rem;
   }
   .footer__container {
     padding: 5.5rem 16.5rem;

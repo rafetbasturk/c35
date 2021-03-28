@@ -194,7 +194,7 @@
     }
 
     .main {
-        padding: 10rem 16.5rem;
+        padding: 15rem 16.5rem;
         position: relative;
         
 
@@ -218,6 +218,10 @@
 
     .creation {
         padding: 2.5rem 16.5rem 10rem;
+
+        &__cards-desktop {
+            padding: 3rem 0 5rem;
+        }
     }
 
     .footer {
