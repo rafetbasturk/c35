@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+// variables
+
+$pri-d-gray: hsl(0, 0%, 55%);
+$neu-v-d-gray: hsl(0, 0%, 41%);
+
+// mixin
+
+@mixin link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    display: inline-block;
+
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        margin-top: .3rem;
+        border-bottom: 2px solid white;  
+        transform: scaleX(0);
+        transform-origin: left;  
+        transition: transform 250ms ease-in-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+}
+
+// responsive
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content; 
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: 1400px) {
+        @content; 
+    }
+}

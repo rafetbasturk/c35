@@ -1,0 +1,252 @@
+@include tablet {
+    .header {
+        background: url(/public/images/desktop/image-hero.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin: auto;
+        padding: 4rem;
+
+        &--navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__menu {
+            display: flex;
+            position: unset;
+        }
+
+        &__icons {
+            display: none !important;
+        }
+
+        &__nav {
+            position: unset;
+            display: flex !important;
+            background: transparent;
+            padding: 0;
+            width: fit-content;
+        }
+
+        &--link {
+            font-family: 'Alata', sans-serif;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+
+            &::after {
+                width: 50%;
+                position: relative;
+                transform-origin: center;
+                left: 25%;
+            }
+
+            &:hover::after {
+                transform-origin: center;
+            }
+        }
+    
+        &__message {
+            width: 60%;
+            padding: 4rem;
+
+            p {
+                font-size: 5rem;
+            }
+        }
+    }
+    
+    .logo {
+        width: 170px;
+    }
+
+    .nav {
+        
+        li {
+            display: inline;
+            padding: 0 1.4rem;
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .main {
+        padding: 6rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__img {
+            width: 50%;
+        }
+
+        &__body {
+            width: 50%;
+            text-align: left;
+            padding: 0 0 0 2.5rem;
+        }
+    }
+
+    .creation {
+        padding: 2.5rem 4rem 10rem;
+
+        &__heading {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 4.8rem;
+        }
+
+        &__cards-mobile {
+            display: none;
+        }
+
+        &__cards-desktop {
+            grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+            gap: 2.8rem;
+            margin-bottom: 3.2rem;
+            display: grid;
+        }
+
+        &__card {
+            
+            span {
+                font-size: 3.2rem;
+                bottom: 4rem;
+                left: 4rem;
+                width: 65%;
+            }
+        }
+    }
+
+    .btn {
+        border-width: 2px;
+        font-size: 1.6rem;
+
+        &--hidden {
+            display: block;
+        }
+
+        &--show {
+            display: none;
+        }
+    }
+
+    .footer {
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            justify-items: left;
+            align-items: center;
+            padding: 5.5rem 4rem;
+        }
+    
+        &--nav {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+            justify-self: center;
+
+            li {
+
+                &:first-of-type {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        &__social {
+            justify-self: right;
+
+            svg {
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    
+        &__copy {
+            grid-column: 1 / 3;
+            justify-self: center;
+        }
+    }
+}
+
+@include laptop {
+    .header {
+        padding: 6.4rem 16.5rem;
+
+        &__message {
+            width: 650px;
+            padding-bottom: 2rem;
+
+            p {
+                font-size: 7.2rem;
+            }
+        }
+    }
+    
+    .logo {
+        width: 192px;
+    }
+
+    .main {
+        padding: 10rem 16.5rem;
+        position: relative;
+        
+
+        &__img {
+            width: 730px;
+        }
+
+        &__body {
+            position: absolute;
+            bottom: 10rem;
+            right: 16.5rem;
+            background: white;
+            width: 540px;
+            padding: 9.5rem 0 0 9.5rem;
+
+            h1 {
+                font-size: 4.8rem;
+            }
+        }
+    }
+
+    .creation {
+        padding: 2.5rem 16.5rem 10rem;
+    }
+
+    .footer {
+
+        &__container {
+            padding: 5.5rem 16.5rem;
+        }
+
+        &--nav {
+            grid-column: 1 / 2;
+            justify-self: left;
+            align-self: flex-end;
+        }
+
+        &__social {
+            justify-self: right;
+
+            svg {
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    
+        &__copy {
+            grid-column: 2 / 3;
+            justify-self: right;
+            text-align: right;
+        }
+    }
+}
